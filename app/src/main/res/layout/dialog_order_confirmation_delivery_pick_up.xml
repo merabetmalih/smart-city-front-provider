@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <View
+            android:layout_marginTop="3dp"
+            android:layout_width="50dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/dialog_rectangle"
+            />
+
+    <TextView
+            android:layout_margin="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="confirm order ?"
+            android:textSize="18sp"
+            android:padding="5dp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            />
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_above="@+id/next_container"
+            android:background="@color/default_background_color" />
+
+    <com.airbnb.lottie.LottieAnimationView
+            android:layout_margin="16dp"
+            android:id="@+id/lottieAnimationView"
+            android:layout_gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/check_mark_success" />
+
+    <LinearLayout
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        <TextView
+                android:visibility="gone"
+                android:id="@+id/confirm_picked_up"
+                android:layout_marginBottom="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="By continuing you confirm that the order has been picked up by the customer."
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:gravity="center"
+                android:layout_gravity="center"
+                />
+
+        <TextView
+                android:visibility="gone"
+                android:id="@+id/confirm_delivered"
+                android:layout_marginBottom="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="By continuing you confirm that the order has been delivered to the address indicated by the customer."
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:gravity="center"
+                android:layout_gravity="center"
+                />
+
+        <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DATE AND TIME"
+                android:textSize="14sp"
+                android:padding="5dp"
+                android:textColor="@color/dark"
+                android:textStyle="bold"
+                />
+
+
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_above="@+id/next_container"
+                android:background="@color/default_background_color" />
+
+
+        <com.github.florent37.singledateandtimepicker.SingleDateAndTimePicker
+                android:id="@+id/single_day_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:picker_itemSpacing="6dp"
+                app:picker_curvedMaxAngle="45"
+                app:picker_curved="true"
+                app:picker_selectorColor="@android:color/transparent"
+                app:picker_stepSizeHours="1"
+                app:picker_stepSizeMinutes="1"
+                app:picker_cyclic="true"
+                app:picker_dayCount="31"
+                app:picker_mustBeOnFuture="false"
+                app:picker_visibleItemCount="3"
+
+                />
+
+        <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="COMMENT"
+                android:textSize="14sp"
+                android:padding="5dp"
+                android:textColor="@color/dark"
+                android:textStyle="bold"
+                />
+
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_above="@+id/next_container"
+                android:background="@color/default_background_color" />
+
+
+
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:minHeight="70dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/input_comment"
+                    android:textColor="#000"
+                    android:hint="Comment"
+                    android:gravity="start"
+                    android:padding="5dp"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:backgroundTint="@color/grey0"
+                    android:background="@drawable/round_corner_toggle"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+
+
+
+        <Button
+                android:id="@+id/confirm_order_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/radius_button_blue"
+                android:text="Confirm order"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:layout_marginBottom="10dp"/>
+
+        <Button
+                android:id="@+id/back_order"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/radius_button_white_border"
+                android:text="Back"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="17sp"
+                android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+</LinearLayout>

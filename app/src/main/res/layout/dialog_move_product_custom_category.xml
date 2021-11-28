@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <View
+            android:layout_marginTop="3dp"
+            android:layout_width="50dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/dialog_rectangle"
+            />
+
+    <TextView
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categories"
+            android:textSize="18sp"
+            android:padding="5dp"
+            android:textColor="@color/dark"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            />
+
+    <View
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/next_container"
+            android:background="@color/default_background_color" />
+
+
+    <LinearLayout
+            android:layout_marginLeft="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Move product to"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:textColor="@color/dark"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                />
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/move_product_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_marginBottom="10dp"/>
+
+
+    </LinearLayout>
+</LinearLayout>

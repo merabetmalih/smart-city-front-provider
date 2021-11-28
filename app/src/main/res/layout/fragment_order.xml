@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".ui.main.order.order.OrderFragment">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:gravity="start">
+
+
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Your Orders"
+                android:textColor="@color/dark"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                />
+
+        <LinearLayout
+                android:id="@+id/search_button"
+                android:paddingStart="10dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/ic_baseline_manage_search_24"
+                    />
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/filter_button"
+                android:paddingStart="10dp"
+                android:paddingEnd="20dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/ic_baseline_filter_alt_24"
+                    />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/coordinatorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            tools:context=".ui.main.order.order.OrderFragment">
+
+        <View
+                android:id="@+id/focusable_view"
+                android:layout_width="0.5dp"
+                android:layout_height="0.5dp"
+                android:focusableInTouchMode="true" />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/order_action_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:paddingStart="16dp"/>
+
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/new_default_background_color" />
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/swipe_refresh"
+                            android:layout_weight="1"
+                            >
+                        <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/orders_recyclerview"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scrollbars="none" />
+
+                    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+                    <LinearLayout
+                            android:id="@+id/steps_btns"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                        <View
+                                android:layout_width="3dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/new_default_background_color"
+                                />
+
+                        <androidx.core.widget.NestedScrollView
+                                android:fillViewport="true"
+                                android:layout_width="75dp"
+                                android:layout_height="match_parent">
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/order_steps_recyclerview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scrollbars="none"
+                                    />
+
+
+
+
+                        </androidx.core.widget.NestedScrollView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+        </LinearLayout>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/order_date_range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:layout_margin="16dp"
+                android:visibility="gone"
+                app:backgroundTint="@color/bleu"
+                app:srcCompat="@drawable/ic_baseline_calendar_today_24"
+                app:tint="@color/white" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <ImageView
+            android:id="@+id/empty_list"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/empty_list"
+            android:layout_marginEnd="78dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

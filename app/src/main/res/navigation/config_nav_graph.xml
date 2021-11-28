@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/config_nav_graph"
+        app:startDestination="@id/chooseServiceConfigFragment">
+
+    <fragment
+            android:id="@+id/chooseServiceConfigFragment"
+            android:name="com.smartcity.provider.ui.config.ChooseServiceConfigFragment"
+            android:label="fragment_choose_service_config"
+            tools:layout="@layout/fragment_choose_service_config" >
+        <action
+                android:id="@+id/action_chooseServiceConfigFragment_to_createStoreConfigFragment"
+                app:destination="@id/createStoreConfigFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/createStoreConfigFragment"
+            android:name="com.smartcity.provider.ui.config.CreateStoreConfigFragment"
+            android:label="fragment_create_store_config"
+            tools:layout="@layout/fragment_create_store_config" >
+        <action
+                android:id="@+id/action_createStoreConfigFragment_to_categoryConfigFragment"
+                app:destination="@id/categoryConfigFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/categoryConfigFragment"
+            android:name="com.smartcity.provider.ui.config.CategoryConfigFragment"
+            android:label="fragment_category_config"
+            tools:layout="@layout/fragment_category_config" >
+        <action
+                android:id="@+id/action_categoryConfigFragment_to_categoryValueConfigFragment"
+                app:destination="@id/categoryValueConfigFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/categoryValueConfigFragment"
+            android:name="com.smartcity.provider.ui.config.CategoryValueConfigFragment"
+            android:label="fragment_category_value_config"
+            tools:layout="@layout/fragment_category_value_config" />
+</navigation>

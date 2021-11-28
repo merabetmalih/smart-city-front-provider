@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:id="@+id/order_action_container"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="5dp"
+        android:elevation="0dp"
+        android:orientation="horizontal"
+        >
+
+    <LinearLayout
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <ImageButton
+                android:id="@+id/order_action_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_baseline_all_inclusive_white"
+                android:paddingLeft="10dp"
+                android:layout_gravity="center"
+                />
+
+        <TextView
+                android:id="@+id/order_action_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All orders"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                />
+    </LinearLayout>
+
+</LinearLayout>

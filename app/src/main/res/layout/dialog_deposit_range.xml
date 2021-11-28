@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        >
+    <TextView
+            android:id="@+id/header"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:ellipsize="end"
+            android:textColor="@color/grey4"
+            android:textSize="17sp"
+            android:text="Range"
+            android:maxLines="3"
+            android:textAlignment="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textAllCaps="false"/>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/container1"
+                android:layout_margin="16dp"
+                >
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    >
+
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/input_start_range"
+                        android:textColor="#000"
+                        android:hint="start"
+                        android:inputType="number"
+                        
+                        />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageButton
+                    android:id="@+id/delete_optiofn_value"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_baseline_arrow_forward_24"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:layout_weight="0"
+                    
+                    android:layout_gravity="bottom"
+                    />
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    >
+
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/input_end_range"
+                        android:textColor="#000"
+                        android:hint="end"
+                        android:inputType="number"
+                        
+                        />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    >
+
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/input_amount"
+                        android:textColor="#000"
+                        android:hint="amount"
+                        android:inputType="number"
+                        
+                        />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <Button
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="16dp"
+            android:textColor="@color/white"
+            android:background="@drawable/main_button_drawable"
+            android:text="save" />
+
+</LinearLayout>

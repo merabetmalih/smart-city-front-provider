@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/nav_blog"
+        app:startDestination="@id/orderFragment"
+        >
+
+    <fragment android:id="@+id/orderFragment"
+            android:name="com.smartcity.provider.ui.main.order.order.OrderFragment"
+            android:label="@string/fragment_blog"
+            tools:layout="@layout/fragment_order">
+        <action
+                android:id="@+id/action_orderFragment_to_viewOrderFragment"
+                app:destination="@id/viewOrderFragment" />
+        <action
+                android:id="@+id/action_orderFragment_to_searchOrdersFragment"
+                app:destination="@id/searchOrdersFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/viewOrderFragment"
+            android:name="com.smartcity.provider.ui.main.order.order.ViewOrderFragment"
+            android:label="fragment_view_order"
+            tools:layout="@layout/fragment_view_order" >
+        <action
+                android:id="@+id/action_viewOrderFragment_to_addOrderNoteFragment"
+                app:destination="@id/addOrderNoteFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/searchOrdersFragment"
+            android:name="com.smartcity.provider.ui.main.order.search.SearchOrdersFragment"
+            android:label="fragment_search_orders"
+            tools:layout="@layout/fragment_search_orders" >
+        <action
+                android:id="@+id/action_searchOrdersFragment_to_scanQrCodeFragment"
+                app:destination="@id/scanQrCodeFragment" />
+        <action
+                android:id="@+id/action_searchOrdersFragment_to_receiverNameFragment"
+                app:destination="@id/receiverNameFragment" />
+        <action
+                android:id="@+id/action_searchOrdersFragment_to_pickDateFragment"
+                app:destination="@id/pickDateFragment" />
+        <action
+                android:id="@+id/action_searchOrdersFragment_to_viewSearchOrdersFragment"
+                app:destination="@id/viewSearchOrdersFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/scanQrCodeFragment"
+            android:name="com.smartcity.provider.ui.main.order.search.ScanQrCodeFragment"
+            android:label="fragment_scan_qr_code"
+            tools:layout="@layout/fragment_scan_qr_code" >
+        <action
+                android:id="@+id/action_scanQrCodeFragment_to_viewOrderFragment"
+                app:destination="@id/viewOrderFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/receiverNameFragment"
+            android:name="com.smartcity.provider.ui.main.order.search.ReceiverNameFragment"
+            android:label="fragment_receiver_name"
+            tools:layout="@layout/fragment_receiver_name" >
+        <action
+                android:id="@+id/action_receiverNameFragment_to_viewSearchOrdersFragment"
+                app:destination="@id/viewSearchOrdersFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/viewSearchOrdersFragment"
+            android:name="com.smartcity.provider.ui.main.order.search.ViewSearchOrdersFragment"
+            android:label="fragment_view_search_orders"
+            tools:layout="@layout/fragment_view_search_orders" >
+        <action
+                android:id="@+id/action_viewSearchOrdersFragment_to_viewOrderFragment"
+                app:destination="@id/viewOrderFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/pickDateFragment"
+            android:name="com.smartcity.provider.ui.main.order.search.PickDateFragment"
+            android:label="fragment_pick_date"
+            tools:layout="@layout/fragment_pick_date" >
+        <action
+                android:id="@+id/action_pickDateFragment_to_viewSearchOrdersFragment"
+                app:destination="@id/viewSearchOrdersFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/addOrderNoteFragment"
+            android:name="com.smartcity.provider.ui.main.order.order.AddOrderNoteFragment"
+            android:label="fragment_add_order_note"
+            tools:layout="@layout/fragment_add_order_note" />
+
+</navigation>

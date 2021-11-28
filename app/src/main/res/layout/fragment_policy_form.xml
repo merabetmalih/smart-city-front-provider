@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.main.account.policy.PolicyFormFragment"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.main.account.policy.PolicyFormFragment"
+        android:orientation="vertical"
+        android:id="@+id/container">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Do you accept delivery orders ?"
+                android:textColor="#000"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"/>
+
+        <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal"
+                android:id="@+id/delivery_group"
+                android:layout_gravity="center"
+                >
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/delivery_yes"
+                    android:text="Yes"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:layout_marginEnd="16dp"
+                    />
+
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/delivery_no"
+                    android:text="No"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+
+                    />
+
+        </RadioGroup>
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Choose one option for picked up orders"
+                android:textColor="#000"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                />
+
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/default_background_color"/>
+
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radio_without_payment"
+                        android:text="Without payment"
+                        android:textSize="16sp"
+                        android:textColor="#000"
+                        android:layout_weight="1"
+                        />
+                <ImageView
+                        android:id="@+id/expand_without_payment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_baseline_add_24"
+                        android:layout_gravity="center"
+                        />
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/description_without_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="32dp"
+                    android:text="description"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/default_background_color"/>
+
+
+
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/default_background_color"/>
+
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                    <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/radio_total_payment"
+                            android:text="Payment of the entire order"
+                            android:textSize="16sp"
+                            android:textColor="#000"
+                            android:layout_weight="1"
+                            />
+                    <ImageView
+                            android:id="@+id/expand_total_payment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_baseline_add_24"
+                            android:layout_gravity="center"
+                            />
+                </LinearLayout>
+
+                <TextView
+                        android:id="@+id/description_total_payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="32dp"
+                        android:text="description"
+                        android:visibility="gone"/>
+            </LinearLayout>
+
+
+
+
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/default_background_color"/>
+
+
+
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                    <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/radio_part_fixed"
+                            android:text="Payment of a percentage deposit for the order"
+                            android:textSize="16sp"
+                            android:textColor="#000"
+                            android:layout_weight="1"
+                            />
+                    <ImageView
+                            android:id="@+id/expand_part_fixed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_baseline_add_24"
+                            android:layout_gravity="center"
+                            />
+                </LinearLayout>
+
+                <TextView
+                        android:id="@+id/description_part_fixed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="32dp"
+                        android:text="description"
+                        android:visibility="gone"/>
+            </LinearLayout>
+
+
+
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/default_background_color"/>
+
+
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radio_part_range"
+                        android:text="Payment of a fixed deposit for the order"
+                        android:textSize="16sp"
+                        android:textColor="#000"
+                        android:layout_weight="1"
+                        />
+                <ImageView
+                        android:id="@+id/expand_part_range"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_baseline_add_24"
+                        android:layout_gravity="center"
+                        />
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/description_part_range"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="32dp"
+                    android:text="description"
+                    android:visibility="gone"/>
+        </LinearLayout>
+
+
+
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/default_background_color"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center|bottom"
+            android:background="@color/new_default_background_color"
+            >
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp">
+            <Button
+                    android:id="@+id/option_policy_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/radius_button_blue"
+                    android:text="Next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:layout_gravity="bottom"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+</ScrollView>

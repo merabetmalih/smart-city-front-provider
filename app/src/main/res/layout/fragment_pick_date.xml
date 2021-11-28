@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/new_default_background_color"
+        tools:context=".ui.main.order.search.PickDateFragment">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            >
+
+        <LinearLayout
+                android:id="@+id/pick_search_orders_date"
+                android:padding="16dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark"
+                    android:textSize="18sp"
+                    android:text="Date"
+                    />
+
+            <TextView
+                    android:id="@+id/search_orders_date_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/bleu_dark"
+                    android:textSize="18sp"
+                    android:text="xxxx-xx-xx"
+                    android:gravity="right"
+                    />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:id="@+id/next_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/new_default_background_color"
+            android:padding="16dp"
+            android:layout_weight="1">
+
+        <Button
+                android:id="@+id/search_orders_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/radius_button_blue"
+                android:text="Search"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_gravity="bottom"/>
+    </LinearLayout>
+</LinearLayout>

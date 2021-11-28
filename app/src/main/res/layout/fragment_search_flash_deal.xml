@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.main.account.flashdeals.SearchFlashDealFragment">
+
+    <LinearLayout
+            android:id="@+id/pick_date_search_flash_container"
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/raduis_selector_white">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Search"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    />
+            <ImageButton
+                    android:id="@+id/pick_date_search_flash_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_baseline_search_24"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/search_range_date"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:gravity="center"
+            />
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/default_background_color"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_flash_recyclerview"
+            android:scrollbars="vertical"
+            android:background="@color/white"
+            />
+
+</LinearLayout>
